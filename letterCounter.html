@@ -1,0 +1,24 @@
+<!doctype html>
+<html ng-app="letterCounter">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="letterCounter.js"></script>
+    <link rel="stylesheet" href="letterCounter.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <title>Letter Counter</title>
+  </head>
+  <body class="yo">
+  <div class="container">
+    <h2>How many times do letters repeat?</h2>
+    <h4>Enter a word or a phrase and we'll do the hard work!</h4>
+    <div ng-controller="letterCtrl">
+      <form>
+        <input type="text" ng-model="num" ng-change="countLetters(str)" size="50" placeholder="Enter a word or a phrase.">
+        <input class="btn-primary" type="submit" value="Enter">
+      </form>
+
+    <h5>{{result}}</h5>
+    </div>
+  </div>
+  </body>
+</html>
