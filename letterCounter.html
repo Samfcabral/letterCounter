@@ -12,12 +12,12 @@
     <h2>How many times do letters repeat?</h2>
     <h4>Enter a word or a phrase and we'll do the hard work!</h4>
     <div ng-controller="letterCtrl">
-      <form>
-        <input type="text" ng-model="num" ng-change="countLetters(str)" size="50" placeholder="Enter a word or a phrase.">
-        <input class="btn-primary" type="submit" value="Enter">
+      <form ng-submit="countLetters(num)">
+        <input type="text" ng-model="num" size="50" placeholder="Enter a word or a phrase.">
+        <input class="btn-primary" type="submit" value="Let's Check!">
       </form>
 
-    <h5>{{result}}</h5>
+    <h5 ng-repeat="(key, val) in result">{{key}}: {{val}}</h5>
     </div>
   </div>
   </body>
